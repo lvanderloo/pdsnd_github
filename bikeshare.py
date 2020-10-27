@@ -84,7 +84,6 @@ def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
-    start_time = time.time()
 
     # display the most common month
     # map month number to month name (string)
@@ -110,7 +109,6 @@ def time_stats(df):
     popular_hour = df['hour'].mode()[0]
     print('\nThe most popular start hour was {}.\n'.format(popular_hour))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 
@@ -118,7 +116,6 @@ def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
-    start_time = time.time()
 
     # display most commonly used start station
     most_common_start_station = df['Start Station'].mode()[0]
@@ -133,7 +130,6 @@ def station_stats(df):
     most_common_start_end_station = df['Start and End Station'].mode()[0]
     print('\nThe most popular start station and end station combination was {} respectively.\n'.format(most_common_start_end_station))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 
@@ -141,7 +137,6 @@ def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
     print('\nCalculating Trip Duration...\n')
-    start_time = time.time()
 
     # display total travel time
     total_travel_time_sec = df['Trip Duration'].sum()
@@ -153,7 +148,6 @@ def trip_duration_stats(df):
     mean_travel_time_min = int(mean_travel_time_sec / 60)
     print('\nThe mean travel time per ride was {} minutes.\n'.format(mean_travel_time_min))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 
@@ -161,7 +155,6 @@ def user_stats(df):
     """Displays statistics on bikeshare users."""
 
     print('\nCalculating User Stats...\n')
-    start_time = time.time()
 
     # Display counts of user types
     user_types = df['User Type'].value_counts()
@@ -185,7 +178,6 @@ def user_stats(df):
     else:
         print('\nThere is no birth year information available for users in the city you selected.\n')
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 def display_data(df):
