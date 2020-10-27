@@ -14,4 +14,4 @@ new_york_city.csv
 washington.csv
 
 ### Credits
-All credits to Udacity
+All credits to Udacity, and to the Python Pandas API reference at https://pandas.pydata.org/docs/reference/index.html
