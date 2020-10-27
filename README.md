@@ -8,10 +8,10 @@ Bikeshare Python Project
 This Python project provides various stats for a bikesharing company for 3 cities (Chicago, New York City, Washington)
 
 ### Files used
-bikeshare.py
-chicago.csv
-new_york_city.csv
-washington.csv
+* bikeshare.py
+* chicago.csv
+* new_york_city.csv
+* washington.csv
 
 ### Credits
 All credits to Udacity, and to the Python Pandas API reference at https://pandas.pydata.org/docs/reference/index.html
