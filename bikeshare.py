@@ -18,18 +18,21 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input("Please enter a city for which you would like more information, choosing from \"Chicago\", \"New York City\", or \"Washington\": ").lower()
+    # Ensure that user inputs one of the 3 cities for which we have data and reprompts if they do not choose one of the 3 cities or make a typo:
     while city not in CITY_DATA.keys():
         print("You did not correctly select one of the 3 cities. Please enter the city again.")
         city = input("Please enter a city for which you would like more information, choosing from \"Chicago\", \"New York City\", or \"Washington\": ").lower()
 
     # get user input for month (all, january, february, ... , june)
     month = input("Please enter the month that you are interested in (from range January - June). Type \"all\" if you do not want to filter by month : ").lower()
+    # Ensure that user inputs one of the 3 cities for which we have data and reprompts if they do not choose one of the 3 cities or make a typo:
     while month not in ['january', 'february', 'march', 'april', 'may', 'june','all']:
         print("You did not correctly select a month from the range January - June or selected \"all\". Please enter the month(s) you are interested in again.")
         month = input("Please enter the month that you are interested in (from range January - June). Type \"all\" if you do not want to filter by month : ").lower()
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     day = input("Please enter the weekday (Monday - Sunday) in which you are interested. Type \"all\" if you do not want to filter by weekday: ").lower()
+    # Ensure that user inputs one of the 3 cities for which we have data and reprompts if they do not choose one of the 3 cities or make a typo:
     while day not in ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday','all']:
         print("You did not correctly select a weekday. Please enter the weekday(s) you are interested in again.")
         day = input("Please enter the weekday (Monday - Sunday) in which you are interested. Type \"all\" if you do not want to filter by weekday: ").lower()
