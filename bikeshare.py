@@ -202,9 +202,13 @@ def main():
         df = load_data(city, month, day)
 
         time_stats(df)
+        print("-"*20)
         station_stats(df)
+        print("-"*20)
         trip_duration_stats(df)
+        print("-"*20)
         user_stats(df)
+        print("-"*20)
         display_data(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
